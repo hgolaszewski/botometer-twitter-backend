@@ -11,7 +11,7 @@ class Scheduler(val mainService: MainService) {
 
     val logger: Logger = Logger.getLogger("SchedulerLogger")
 
-    @Scheduled(fixedDelay = 21600000, initialDelay = 21600000)
+    @Scheduled(fixedDelay = 21600000)
     fun updateScores() {
         logger.info("${Date()} : Scores update process started... ")
         val users = mainService.listUser()
